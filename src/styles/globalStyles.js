@@ -10,7 +10,9 @@ export const lightTheme = {
     ],
   },
   glass: {
-    background: "rgba(255, 255, 255, 0.25)",
+    background: {
+      main: "rgba(255, 255, 255, 0.1)",
+    },
     border: "1px solid rgba(255, 255, 255, 0.18)",
   },
 };
@@ -25,7 +27,9 @@ export const darkTheme = {
     ],
   },
   glass: {
-    background: "rgba(0, 0, 0, 0.25)",
+    background: {
+      main: "rgba(0, 0, 0, 0.1)",
+    },
     border: "1px solid rgba(0, 0, 0, 0.18)",
   },
 };
@@ -40,6 +44,7 @@ export const defaultTheme = {
   },
   boxShadow: {
     glass: "0 8px 32px 0 rgba( 31, 38, 135, 0.25 )",
+    thin: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
   },
 };
 

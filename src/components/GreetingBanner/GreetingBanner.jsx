@@ -1,8 +1,8 @@
 import React from "react";
-import { MainGlassContainer } from "../../styles/glassContainer";
+import { MainContainer } from "./styles";
 
 const GreetingBanner = () => {
-  return <MainGlassContainer></MainGlassContainer>;
+  return <MainContainer />;
 };
 
 export default GreetingBanner;
