@@ -13,7 +13,7 @@ export const MainGlassContainer = styled.div`
   margin-bottom: 4vh;
 
   background-color: ${({ theme }) => theme.glass.background.main};
-  box-shadow: ${defaultTheme.boxShadow.glass};
+  box-shadow: ${defaultTheme.boxShadow.thin};
   backdrop-filter: blur(${({ blur }) => blur || "10px"});
   -webkit-backdrop-filter: blur(${({ blur }) => blur || "10px"});
   border-radius: 30px;
@@ -27,7 +27,7 @@ export const MainGlassContainer = styled.div`
     border - border
 */
 export const SubGlassContainer = styled.div`
-  box-shadow: ${({ boxShadow }) => boxShadow || defaultTheme.boxShadow.thin};
+  box-shadow: ${defaultTheme.boxShadow.thin};
   backdrop-filter: blur(${({ blur }) => blur || "10px"});
   -webkit-backdrop-filter: blur(${({ blur }) => blur || "10px"});
   border: ${({ theme }) => theme.glass.border};
