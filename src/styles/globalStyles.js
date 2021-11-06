@@ -46,8 +46,6 @@ export const defaultTheme = {
     thick:
       "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -2px;",
     thin: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-    toggle:
-      "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
   },
 };
 
@@ -56,8 +54,9 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         outline: none;
-        font-size: 16px;
-        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        //font-family: 'Mukta', sans-serif;
+        font-family: 'Quicksand', sans-serif;
     }
 
     *, *::before, *::after {

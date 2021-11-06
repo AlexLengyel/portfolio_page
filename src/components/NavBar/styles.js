@@ -89,8 +89,8 @@ export const MenuContainerBig = styled.div`
     display: none;
   }
 
-  @media (min-width: 1400px) {
-    width: 630px;
+  @media (min-width: 1200px) {
+    width: 650px;
   }
 `;
 
@@ -101,7 +101,7 @@ export const MenuItemBig = styled.p`
 
 // If the screen is more narrow than 768px
 export const MenuContainerSmall = styled.div`
-  width: 40vw;
+  width: 30vw;
   height: 60vh;
 
   display: none;
@@ -112,7 +112,7 @@ export const MenuContainerSmall = styled.div`
   position: fixed;
   z-index: 10;
   top: 20vh;
-  left: ${({ open }) => (open ? "60vw" : "100vw")};
+  left: ${({ open }) => (open ? "70vw" : "100vw")};
 
   border-radius: 30px 0px 0px 30px;
 
@@ -126,6 +126,12 @@ export const MenuContainerSmall = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+  }
+
+  @media (max-width: 600px) {
+    width: 40vw;
+
+    left: ${({ open }) => (open ? "60vw" : "100vw")};
   }
 `;
 
