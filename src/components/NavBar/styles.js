@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { SubGlassContainer } from "../../styles/glassContainer";
 import { defaultTheme } from "../../styles/globalStyles";
 
@@ -18,13 +18,38 @@ export const MainContainer = styled(SubGlassContainer)`
   left: 0;
 
   background: ${({ theme }) => theme.glass.background.main};
+  box-shadow: ${defaultTheme.boxShadow.thick};
 `;
 
-export const Logo = styled.p``;
+export const Logo = styled.p`
+  width: 25%;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  width: 25%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 110px;
+  }
+
+  @media (max-width: 600px) {
+    width: 90px;
+  }
+`;
 
 export const Hamburger = styled.div`
-  height: 18px;
-  width: 27px;
+  height: 22px;
+  width: 29px;
+
+  margin-left: auto;
 
   display: none;
   flex-direction: column;
@@ -33,10 +58,10 @@ export const Hamburger = styled.div`
   cursor: pointer;
 
   span {
-    width: 100%;
     height: 2px;
+    width: 100%;
 
-    border-radius: 20px;
+    border-radius: 30x;
     background-color: white;
   }
 
@@ -45,8 +70,8 @@ export const Hamburger = styled.div`
   }
 
   @media (max-width: 600px) {
-    height: 16px;
-    width: 24px;
+    height: 20px;
+    width: 27px;
   }
 `;
 
@@ -54,21 +79,18 @@ export const Hamburger = styled.div`
 export const MenuContainerBig = styled.div`
   width: 50%;
 
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (max-width: 768px) {
     display: none;
-
-    background: ${({ theme }) => theme.glass.background.main};
-    box-shadow: ${defaultTheme.boxShadow.thin};
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
   }
 
-  @media (min-width: 1400px) {
-    width: 630px;
+  @media (min-width: 1200px) {
+    width: 650px;
   }
 `;
 
@@ -78,14 +100,8 @@ export const MenuItemBig = styled.p`
 `;
 
 // If the screen is more narrow than 768px
-const moveMenu = keyframes`
-    100% {
-        transform: translateX(-40vw);
-    }
-`;
-
 export const MenuContainerSmall = styled.div`
-  width: 40vw;
+  width: 30vw;
   height: 60vh;
 
   display: none;
@@ -96,12 +112,12 @@ export const MenuContainerSmall = styled.div`
   position: fixed;
   z-index: 10;
   top: 20vh;
-  left: ${({ open }) => (open ? "60vw" : "100vw")};
+  left: ${({ open }) => (open ? "70vw" : "100vw")};
 
   border-radius: 30px 0px 0px 30px;
 
   background: ${({ theme }) => theme.glass.background.main};
-  box-shadow: ${defaultTheme.boxShadow.thin};
+  box-shadow: ${defaultTheme.boxShadow.thick};
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: ${({ theme }) => theme.glass.border};
@@ -110,6 +126,12 @@ export const MenuContainerSmall = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+  }
+
+  @media (max-width: 600px) {
+    width: 40vw;
+
+    left: ${({ open }) => (open ? "60vw" : "100vw")};
   }
 `;
 
