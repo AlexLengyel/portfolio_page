@@ -36,15 +36,14 @@ export const darkTheme = {
 
 export const defaultTheme = {
   fontSize: {
-    mainTitle: null,
-    title: null,
-    subtitle: null,
-    paragraph: null,
-    small: null,
+    mainTitle: "2.5rem",
+    title: "2rem",
+    subtitle: "1.5rem",
+    paragraph: "1rem",
+    small: "0.5rem",
   },
   boxShadow: {
-    thick:
-      "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -2px;",
+    thick: "rgba(0, 0, 0, 0.16) 0px 4px 20px",
     thin: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
   },
 };
@@ -54,9 +53,18 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         outline: none;
-        font-size: 20px;
+        font-size: 22px;
+        font-weight: 400;
         //font-family: 'Mukta', sans-serif;
         font-family: 'Quicksand', sans-serif;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            font-size: 18px;
+        }
     }
 
     *, *::before, *::after {

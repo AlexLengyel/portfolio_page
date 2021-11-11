@@ -22,7 +22,7 @@ export const MainContainer = styled(SubGlassContainer)`
 `;
 
 export const Logo = styled.p`
-  width: 25%;
+  flex: 1;
 
   @media (max-width: 768px) {
     width: auto;
@@ -30,26 +30,16 @@ export const Logo = styled.p`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 25%;
+  flex: 1;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
-  @media (max-width: 768px) {
-    width: 110px;
-  }
-
-  @media (max-width: 600px) {
-    width: 90px;
-  }
 `;
 
 export const Hamburger = styled.div`
   height: 22px;
   width: 29px;
-
-  margin-left: auto;
 
   display: none;
   flex-direction: column;
@@ -66,10 +56,14 @@ export const Hamburger = styled.div`
   }
 
   @media (max-width: 768px) {
+    margin-left: 35px;
+
     display: flex;
   }
 
   @media (max-width: 600px) {
+    margin-left: 25px;
+
     height: 20px;
     width: 27px;
   }
@@ -77,9 +71,7 @@ export const Hamburger = styled.div`
 
 // If the screen is wider than 768px
 export const MenuContainerBig = styled.div`
-  width: 50%;
-
-  margin: 0 auto;
+  flex: 2;
 
   display: flex;
   justify-content: space-between;
@@ -87,10 +79,6 @@ export const MenuContainerBig = styled.div`
 
   @media (max-width: 768px) {
     display: none;
-  }
-
-  @media (min-width: 1200px) {
-    width: 650px;
   }
 `;
 
