@@ -18,6 +18,8 @@ export const MainGlassContainer = styled.div`
   -webkit-backdrop-filter: blur(${({ blur }) => blur || "10px"});
   border-radius: 30px;
   border: ${({ theme }) => theme.glass.border};
+
+  scroll-margin-top: 11vh;
 `;
 
 /*
