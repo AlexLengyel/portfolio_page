@@ -3,12 +3,14 @@ import { defaultTheme } from "../../styles/globalStyles";
 import { MainGlassContainer } from "../../styles/glassContainer";
 
 export const MainContainer = styled(MainGlassContainer)`
-  padding: 5%;
+  padding: 3.5rem;
 
   display: flex;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
+
+    padding: ${defaultTheme.space.big};
   }
 `;
 
@@ -38,4 +40,6 @@ export const Name = styled.p`
 export const PhotoContainer = styled.div`
   display: flex;
   flex: 2;
+  justify-content: center;
+  align-items: center;
 `;

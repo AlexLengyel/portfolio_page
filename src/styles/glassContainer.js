@@ -11,6 +11,7 @@ export const MainGlassContainer = styled.div`
 
   margin-top: 11vh;
   margin-bottom: 4vh;
+  padding: ${defaultTheme.space.big};
 
   background-color: ${({ theme }) => theme.glass.background.main};
   box-shadow: ${defaultTheme.boxShadow.thin};
@@ -24,7 +25,6 @@ export const MainGlassContainer = styled.div`
 
 /*
     Props:
-    boxShadow - box-shadow
     blur - blur()
     border - border
 */

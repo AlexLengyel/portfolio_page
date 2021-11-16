@@ -30,31 +30,24 @@ const NavBar = () => {
     return scrollViewState !== num ? num : scrollViewState === num && num * 10;
   };
 
+  const handleScrollView = (scrollViewNumber) => {
+    setOpen(false);
+    changeScrollView(toggleChangeScrollViewHandler(scrollViewNumber));
+  };
+
   return (
     <>
       <MainContainer>
         <Logo>Alex's Page</Logo>
         <MenuContainerBig>
-          <MenuItemBig
-            onClick={() => changeScrollView(toggleChangeScrollViewHandler(1))}
-          >
-            Home
-          </MenuItemBig>
-          <MenuItemBig
-            onClick={() => changeScrollView(toggleChangeScrollViewHandler(2))}
-          >
+          <MenuItemBig onClick={() => handleScrollView(1)}>Home</MenuItemBig>
+          <MenuItemBig onClick={() => handleScrollView(2)}>
             About Me
           </MenuItemBig>
-          <MenuItemBig
-            onClick={() => changeScrollView(toggleChangeScrollViewHandler(3))}
-          >
+          <MenuItemBig onClick={() => handleScrollView(3)}>
             Projects
           </MenuItemBig>
-          <MenuItemBig
-            onClick={() => changeScrollView(toggleChangeScrollViewHandler(4))}
-          >
-            Contact
-          </MenuItemBig>
+          <MenuItemBig onClick={() => handleScrollView(4)}>Contact</MenuItemBig>
         </MenuContainerBig>
         <ButtonContainer>
           <ToggleButton />
@@ -66,24 +59,14 @@ const NavBar = () => {
         </ButtonContainer>
       </MainContainer>
       <MenuContainerSmall open={open}>
-        <MenuItemSmall
-          onClick={() => changeScrollView(toggleChangeScrollViewHandler(1))}
-        >
-          Home
-        </MenuItemSmall>
-        <MenuItemSmall
-          onClick={() => changeScrollView(toggleChangeScrollViewHandler(2))}
-        >
+        <MenuItemSmall onClick={() => handleScrollView(1)}>Home</MenuItemSmall>
+        <MenuItemSmall onClick={() => handleScrollView(2)}>
           About Me
         </MenuItemSmall>
-        <MenuItemSmall
-          onClick={() => changeScrollView(toggleChangeScrollViewHandler(3))}
-        >
+        <MenuItemSmall onClick={() => handleScrollView(3)}>
           Projects
         </MenuItemSmall>
-        <MenuItemSmall
-          onClick={() => changeScrollView(toggleChangeScrollViewHandler(4))}
-        >
+        <MenuItemSmall onClick={() => handleScrollView(4)}>
           Contact
         </MenuItemSmall>
       </MenuContainerSmall>

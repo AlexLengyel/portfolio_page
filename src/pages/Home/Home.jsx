@@ -2,9 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import ParticleBackground from "../../components/Particle/ParticleBackground";
 import { MainContainer } from "./styles";
-import GreetingBanner from "../../components/GreetingBanner/GreetingBanner";
 import NavBar from "../../components/NavBar/NavBar";
+import GreetingBanner from "../../components/GreetingBanner/GreetingBanner";
 import AboutMe from "../../components/AboutMe/AboutMe";
+import Projects from "../../components/Projects/Projects";
+import Contact from "../../components/Contact/Contact";
 
 const scrollViewStyle = {
   behavior: "smooth",
@@ -46,6 +48,8 @@ const Home = () => {
       <NavBar />
       <GreetingBanner ref={greetingRef} />
       <AboutMe ref={aboutMeRef} />
+      <Projects ref={projectsRef} />
+      <Contact ref={contactRef} />
     </MainContainer>
   );
 };

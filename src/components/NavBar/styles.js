@@ -24,6 +24,8 @@ export const MainContainer = styled(SubGlassContainer)`
 export const Logo = styled.p`
   flex: 1;
 
+  font-weight: 700;
+
   @media (max-width: 768px) {
     width: auto;
   }
