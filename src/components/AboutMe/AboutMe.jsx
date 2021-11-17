@@ -1,4 +1,6 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
+import Experience from "./Exp&Edc/Experience";
+import Education from "./Exp&Edc/Education";
 import {
   MainContainer,
   MainTitle,
@@ -7,19 +9,24 @@ import {
   TextContainer,
   Description,
   Title,
-  Subtitle,
+  TechnologyTitle,
   TechnologiesContainer,
   TechnologyGlass,
   TechnologyName,
+  ButtonsContainer,
+  Button,
 } from "./styles";
 
 const AboutMe = forwardRef((props, ref) => {
+  const [experienceView, setExperienceView] = useState(true);
+
   return (
     <MainContainer ref={ref}>
       <MainTitle>About Me</MainTitle>
       <ContentContainer>
         <PhotoContainer></PhotoContainer>
         <TextContainer>
+          {/* About me description */}
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -29,8 +36,9 @@ const AboutMe = forwardRef((props, ref) => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </Description>
+          {/* Technologies */}
           <Title>Technologies</Title>
-          <Subtitle>Frontend:</Subtitle>
+          <TechnologyTitle>Frontend:</TechnologyTitle>
           <TechnologiesContainer>
             <TechnologyGlass>
               <TechnologyName>HTML</TechnologyName>
@@ -54,7 +62,7 @@ const AboutMe = forwardRef((props, ref) => {
               <TechnologyName>Material UI</TechnologyName>
             </TechnologyGlass>
           </TechnologiesContainer>
-          <Subtitle>Backend:</Subtitle>
+          <TechnologyTitle>Backend:</TechnologyTitle>
           <TechnologiesContainer>
             <TechnologyGlass>
               <TechnologyName>Python</TechnologyName>
@@ -69,7 +77,7 @@ const AboutMe = forwardRef((props, ref) => {
               <TechnologyName>Django REST Framework</TechnologyName>
             </TechnologyGlass>
           </TechnologiesContainer>
-          <Subtitle>DevOps:</Subtitle>
+          <TechnologyTitle>DevOps:</TechnologyTitle>
           <TechnologiesContainer bigMarginBottom={true}>
             <TechnologyGlass>
               <TechnologyName>Docker</TechnologyName>
@@ -90,6 +98,14 @@ const AboutMe = forwardRef((props, ref) => {
               <TechnologyName>CI/CD</TechnologyName>
             </TechnologyGlass>
           </TechnologiesContainer>
+          {/* Experience & Education*/}
+          <ButtonsContainer>
+            <Button marginRight={true} onClick={() => setExperienceView(true)}>
+              Experience
+            </Button>
+            <Button onClick={() => setExperienceView(false)}>Education</Button>
+          </ButtonsContainer>
+          {experienceView ? <Experience experience={true} /> : <Education />}
         </TextContainer>
       </ContentContainer>
     </MainContainer>

@@ -16,6 +16,7 @@ export const MainTitle = styled.div`
 
   font-size: ${defaultTheme.fontSize.mainTitle};
   font-weight: 700;
+  text-align: center;
 `;
 
 export const ContentContainer = styled.div`
@@ -58,9 +59,10 @@ export const Title = styled.p`
   font-weight: 700;
 `;
 
-export const Subtitle = styled.p`
+export const TechnologyTitle = styled.p`
   margin-bottom: ${defaultTheme.space.extraSmall};
 
+  font-size: ${defaultTheme.fontSize.small};
   font-weight: 700;
 `;
 
@@ -88,4 +90,24 @@ export const TechnologyGlass = styled(SubGlassContainer)`
 
 export const TechnologyName = styled.p`
   font-size: ${defaultTheme.fontSize.small};
+`;
+
+export const ButtonsContainer = styled.div`
+  width: 100%;
+
+  margin-bottom: ${defaultTheme.space.normal};
+
+  display: flex;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+export const Button = styled.p`
+  margin-right: ${({ marginRight }) => marginRight && defaultTheme.space.big};
+
+  font-size: ${defaultTheme.fontSize.subtitle};
+  font-weight: 700;
+  cursor: pointer;
 `;
