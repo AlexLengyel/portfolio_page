@@ -105,7 +105,7 @@ const AboutMe = forwardRef((props, ref) => {
             </Button>
             <Button onClick={() => setExperienceView(false)}>Education</Button>
           </ButtonsContainer>
-          {experienceView ? <Experience experience={true} /> : <Education />}
+          {experienceView ? <Experience /> : <Education />}
         </TextContainer>
       </ContentContainer>
     </MainContainer>
