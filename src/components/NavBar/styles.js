@@ -4,7 +4,7 @@ import { defaultTheme } from "../../styles/globalStyles";
 
 export const MainContainer = styled(SubGlassContainer)`
   min-height: 7vh;
-  width: 100vw;
+  width: 100%;
 
   padding: 0 5%;
 
@@ -43,6 +43,8 @@ export const Hamburger = styled.div`
   height: 22px;
   width: 29px;
 
+  margin-left: 5vw;
+
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -58,14 +60,10 @@ export const Hamburger = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-left: 35px;
-
     display: flex;
   }
 
   @media (max-width: 600px) {
-    margin-left: 25px;
-
     height: 20px;
     width: 27px;
   }
