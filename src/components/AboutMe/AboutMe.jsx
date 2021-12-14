@@ -28,16 +28,21 @@ const AboutMe = forwardRef((props, ref) => {
         <TextContainer>
           {/* About me description */}
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            I am an aspiring Full-Stack Software Developer with some experience
+            in building whole web applications using the latest and most
+            appropriate technologies.
           </Description>
           {/* Technologies */}
           <Title>Technologies</Title>
+          <TechnologyTitle>Programming Languages:</TechnologyTitle>
+          <TechnologiesContainer>
+            <TechnologyGlass>
+              <TechnologyName>JavaScript</TechnologyName>
+            </TechnologyGlass>
+            <TechnologyGlass>
+              <TechnologyName>Python</TechnologyName>
+            </TechnologyGlass>
+          </TechnologiesContainer>
           <TechnologyTitle>Frontend:</TechnologyTitle>
           <TechnologiesContainer>
             <TechnologyGlass>
@@ -45,9 +50,6 @@ const AboutMe = forwardRef((props, ref) => {
             </TechnologyGlass>
             <TechnologyGlass>
               <TechnologyName>CSS</TechnologyName>
-            </TechnologyGlass>
-            <TechnologyGlass>
-              <TechnologyName>JavaScript</TechnologyName>
             </TechnologyGlass>
             <TechnologyGlass>
               <TechnologyName>React (+ Redux, Hooks)</TechnologyName>
@@ -65,16 +67,10 @@ const AboutMe = forwardRef((props, ref) => {
           <TechnologyTitle>Backend:</TechnologyTitle>
           <TechnologiesContainer>
             <TechnologyGlass>
-              <TechnologyName>Python</TechnologyName>
+              <TechnologyName>Django (+ DRF)</TechnologyName>
             </TechnologyGlass>
             <TechnologyGlass>
               <TechnologyName>PostgreSQL</TechnologyName>
-            </TechnologyGlass>
-            <TechnologyGlass>
-              <TechnologyName>Django</TechnologyName>
-            </TechnologyGlass>
-            <TechnologyGlass>
-              <TechnologyName>Django REST Framework</TechnologyName>
             </TechnologyGlass>
           </TechnologiesContainer>
           <TechnologyTitle>DevOps:</TechnologyTitle>

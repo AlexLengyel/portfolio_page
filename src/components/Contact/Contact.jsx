@@ -44,7 +44,7 @@ const Contact = forwardRef((props, ref) => {
         (error) => {
           console.log(error.text);
           alert(
-            "Sorry, something went wrong. Please, get in touch with me through from your email account or try again later."
+            "Sorry, something went wrong. Please, get in touch with me through from your email account or try it again later."
           );
         }
       );
