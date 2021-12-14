@@ -36,6 +36,8 @@ export const Date = styled.p`
 
 export const Name = styled.p`
   margin-bottom: ${defaultTheme.space.extraSmall};
+
+  font-weight: 600;
 `;
 
 export const Location = styled.p`
@@ -47,4 +49,8 @@ export const Location = styled.p`
 export const Description = styled.p`
   margin-bottom: ${({ noMarginBottom }) =>
     noMarginBottom ? "0rem" : defaultTheme.space.big};
+`;
+
+export const Link = styled.a`
+  text-decoration: none !important;
 `;
